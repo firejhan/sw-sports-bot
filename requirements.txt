@@ -1,2 +1,5 @@
-python-telegram-bot[job-queue]==21.3
-pytz==2024.1
+google-genai>=1.0.0
+python-telegram-bot>=21.0
+feedparser>=6.0.10
+requests>=2.31.0
+apscheduler>=3.10.0
