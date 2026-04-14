@@ -7,7 +7,7 @@ from telegram import Bot
 from telegram.constants import ParseMode
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 
-GEMINI_API_KEY      = "AIzaSyDgqkqgxLdDNvJpoh0QWBeYAvWVoXPViyY"
+GEMINI_API_KEY      = "AIzaSyBVSTKCvyJZ10lwpIe9p1Uwd3sijsFrF6A"
 FOOTBALL_API_KEY    = "1402e1c873f3401f85319fe58117c03f"
 TELEGRAM_BOT_TOKEN  = "8576826909:AAFTrMH0z9ZxLsTQtjE_S0kyY41xS38C910"
 TELEGRAM_CHANNEL_ID = "-1003940397119"
