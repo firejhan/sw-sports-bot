@@ -58,7 +58,7 @@ def fetch_news():
                 all_news.append({"id":nid,"title":title,"summary":summary,"link":link,"source":f["source"],"competition":f["competition"]})
         except Exception as e:
             logging.error(f"RSS error {f['source']}: {e}")
-    return all_news[:MAX_NEWS_PER_RUN]
+    return all_news
 
 def gen_caption(client, news):
     r = client.models.generate_content(model=TEXT_MODEL, contents=f"""
