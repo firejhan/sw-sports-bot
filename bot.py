@@ -108,7 +108,7 @@ async def run():
     logging.info(f"找到 {len(news_list)} 条")
     for n in news_list:
         try:
-            caption = n["title"] + "\n\n" + n["summary"]
+            caption = gen_caption(gc, n)
             img     = None
             await send(tb, caption, img, n["link"], n["source"])
             mark_sent(n["id"], n["title"])
