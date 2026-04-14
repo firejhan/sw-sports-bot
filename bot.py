@@ -26,17 +26,17 @@ KEYWORDS = ["premier league","champions league","world cup","arsenal","chelsea",
             "man city","man united","tottenham","real madrid","barcelona","transfer","goal","injury"]
 
 def init_db():
-    conn = sqlite3.connect(os.path.expanduser("~/football_bot/news_sent.db"))
+    conn = sqlite3.connect("news_sent.db")
     conn.execute("CREATE TABLE IF NOT EXISTS sent_news (id TEXT PRIMARY KEY, title TEXT, sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP)")
     conn.commit(); conn.close()
 
 def is_sent(nid):
-    conn = sqlite3.connect(os.path.expanduser("~/football_bot/news_sent.db"))
+    conn = sqlite3.connect("news_sent.db")
     r = conn.execute("SELECT 1 FROM sent_news WHERE id=?",(nid,)).fetchone()
     conn.close(); return r is not None
 
 def mark_sent(nid, title):
-    conn = sqlite3.connect(os.path.expanduser("~/football_bot/news_sent.db"))
+    conn = sqlite3.connect("news_sent.db")
     conn.execute("INSERT OR IGNORE INTO sent_news(id,title) VALUES(?,?)",(nid,title))
     conn.commit(); conn.close()
 
