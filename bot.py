@@ -109,7 +109,7 @@ async def run():
     for n in news_list:
         try:
             caption = gen_caption(gc, n)
-            img     = gen_image(gc, n["title"])
+            img     = None
             await send(tb, caption, img, n["link"], n["source"])
             mark_sent(n["id"], n["title"])
             logging.info(f"✅ {n['title'][:50]}")
